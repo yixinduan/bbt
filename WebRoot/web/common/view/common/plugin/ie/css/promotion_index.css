@@ -1,0 +1,81 @@
+*{margin:0; padding:0; list-style:none; }
+body{ background:#fff; font:normal 12px/22px ËÎÌו;  }
+img{ border:0;  }
+a{ text-decoration:none; color:#333;  }
+a:hover{ color:#1974a1;  }
+
+body {
+	overflow-x: auto; font-family: "hiragino sans gb", "microsoft yahei", "wenquanyi micro hei", sans-serif; color: #495d64
+}
+a {
+	color: #495d64; cursor: pointer; text-decoration: none
+}
+.header {
+	border-bottom: #e7e8ea 1px solid; border-left: #e7e8ea 1px; border-top: #e7e8ea 1px solid; border-right: #e7e8ea 1px
+}
+.header .header-inner {
+	padding-left: 32px; width: 1180px; height: 87px; font-size: 14px
+}
+.wrap {
+	margin: 0px auto; width: 1280px
+}
+.header-logo {
+	text-indent: -9999px; width: 280px; background: url(../images/logo_1.png) no-repeat 0px 16px; float: left; height: 80px
+}
+.header-account {
+	padding-bottom: 0px; padding-left: 0px; padding-right: 13px; float: right; margin-left: 23px; padding-top: 27px
+}
+.header-account a {
+	border-bottom: #1f8dd6 1px solid; text-align: center; border-left: #1f8dd6 1px solid; line-height: 31px;      width: 68px; display: inline-block; border-top: #1f8dd6 1px solid; cursor: pointer; margin-right: 11px;        border-right: #1f8dd6 1px solid; border-radius: 4px
+}
+.header-inner .btn-signin {
+	color: #1f8dd6
+}
+.header-inner .btn-signup {
+	background-color: #1f8dd6; color: #fff
+}
+.header-nav {
+	float: right; font-size: 18px
+}
+.header-nav li {
+	position: relative; margin: 0px; float: left; border-top: #fff 3px solid
+}
+.header-nav li a {
+	text-align: center; padding-bottom: 5px; line-height: 78px; padding-left: 25px; outline-width: 0px; padding-right: 25px; display: block; vertical-align: middle; padding-top: 0px
+}
+.header-nav li.selected {
+	border-top: #1f8dd6 3px solid
+}
+.header .head-user {
+	padding-left: 7px; padding-right: 13px; float: right
+}
+.header .head-user li {
+	line-height: 78px; float: left; color: #1f8dd6; margin-right: 11px
+}
+.header .head-user a {
+	line-height: 87px; display: inline-block; height: 87px; color: #1f8dd6; margin-left: 5px
+}
+.header .head-user a.btn-signin {
+	text-align: center; line-height: 31px; background-color: #1f8dd6; width: 67px; height: 31px; color: #fff; margin-left: 20px; vertical-align: -2px; border-radius: 4px; _margin-top: 28px
+}
+#browser_ie {
+	background-color: #f6f6b4; display: none; height: 85px; color: #000; font-size: 15px
+}
+#browser_ie .brower_info {
+	margin: 0px auto; width: 500px; padding-top: 17px
+}
+#browser_ie .brower_info .notice_info {
+	position: relative; margin-top: 5px; float: left
+}
+#browser_ie .brower_info .notice_info p {
+	text-align: left; line-height: 25px; width: 360px; display: inline-block
+}
+#browser_ie .browser_list {
+	position: relative; float: left
+}
+#browser_ie .browser_list img {
+	width: 40px; height: 40px
+}
+#browser_ie .browser_list span {
+	text-align: center; width: 80px; display: inline-block
+}

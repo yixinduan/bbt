@@ -1,0 +1,98 @@
+
+.pagination
+{
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0px 0px 0px;
+  border-radius: 4px;
+}
+
+.pagination a
+{
+	text-decoration:none;
+/*	border: solid 1px #AAE;*/
+	color: #15B;
+}
+
+.pagination a, .pagination span
+{
+	display: block;
+	float: left;
+/* 	padding: 0.3em 0.5em; */
+	padding: 0.0em 0.3em;
+	margin-right: 3px;
+	margin-bottom: 5px;
+	min-width: 0.8em;
+	text-align: center;
+	height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+.pagination .current
+{
+	/*background: #328aa4;*/
+	background: #999;
+	color: #fff;
+	/*border: solid 1px #AAE;
+	font-size: 13px;*/
+	line-height: 24px;
+    /*margin-top: -1px;*/
+}
+
+.pagination .current.prev
+{
+	color: #999;
+	display:block;
+	border-color: #999;
+	background: #fff;
+}
+
+.pagination .current.next
+{
+	color: #999;
+	display:block;
+	border-color: #999;
+	background: #fff;
+}
+
+.page_select {
+	margin: 0;
+
+	padding: 0;
+
+	outline: none;
+
+	height: 24px;
+
+/* 	line-height: 24px; */
+
+	width: 50px;
+
+	border: rgb(191, 204, 220) 1px solid;
+
+	border-radius: 0px;
+
+	display: inline-block;
+
+/* 	font: normal 14px/25px "Î¢ÈíÑÅºÚ", "SimSun", "ËÎÌå", "Arial"; */
+
+	background-size: 5px 5px,5px 5px,20px 0px,0px 25px;
+
+	background-color: #fff;
+
+	background-image: repeating-linear-gradient(225deg,rgb(105,123,149) 0%,rgb(105,123,149) 50%,transparent 50%,transparent 100%), 
+
+	repeating-linear-gradient(135deg,rgb(105,123,149) 0%,rgb(105,123,149) 50%,transparent 50%,transparent 100%), 
+
+	linear-gradient( #FFFFFF 0%,#F8F9Fd, #EFFAFA 100%), 
+
+	repeating-linear-gradient( rgb(191, 204, 220) 0%,rgb(191, 204, 220) 100%);
+
+	background-repeat: no-repeat;
+
+	background-position: 34px 9px,39px 9px,right top,90px top;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}

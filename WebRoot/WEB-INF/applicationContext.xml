@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	
+
+	<bean id="baseConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="/WEB-INF/hiconnection.properties"></property>
+	</bean>
+	
+	<bean id="DataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
+		<property name="driverClassName" value="${connection.driver_class}"/>
+		<property name="url" value="${connection.url}" />
+		<property name="username" value="${connection.username}" />
+		<property name="password" value="${connection.password}" />
+	 	<property name="maxActive" value="10" />
+	  	<property name="maxIdle" value="3" />
+		<property name="timeBetweenEvictionRunsMillis" value="300000"/>
+        <property name="initialSize" value="5" />				<!-- 初始连接数量 -->  
+        <property name="maxWait" value="300000" />				<!-- 一个查询5分钟内没有返回，自动放弃 -->  
+		<property name="validationQuery" value="SELECT 1"/>
+		<property name="testOnBorrow" value="true" />			<!-- 每次获取一个连接的时候，验证一下连接是否可用，语句在validationQuery里面 -->  
+        <property name="removeAbandoned" value="true" />    
+        <property name="removeAbandonedTimeout" value="300" />	<!-- 连接使用后5分钟未关闭，则抛弃 -->  
+	</bean>
+	
+
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="DataSource" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${connection.dialect}</prop>
+				
+				<!-- Create/update the database tables automatically when the JVM starts up -->
+	            
+	            <prop key="hibernate.hbm2ddl.auto">false</prop>
+	            
+	            <!-- Turn batching off for better error messages under PostgreSQL -->
+	            
+	            <prop key="hibernate.max_fetch_depth">5</prop>
+	            <prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+	            <prop key="hibernate.cache.use_query_cache">true</prop>
+	            <prop key="hibernate.jdbc.batch_size">30</prop>
+	            <prop key="hibernate.jdbc.fetch_size">50</prop>
+	            <prop key="hibernate.cglib.use_reflection_optimizer">true</prop>
+	            <prop key="hibernate.query.factory_class"> org.hibernate.hql.ast.ASTQueryTranslatorFactory</prop>
+	            
+	            
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+			</props>
+		</property>
+		
+		<property name="mappingResources">  
+            <list>  
+                <!-- 以下用来列出Hibernate映射文件 -->
+                <value>ib/user/model/User.hbm.xml</value>
+                <value>ib/kcly/model/Kcly.hbm.xml</value>
+                <value>ib/xwdt/model/Xwdt.hbm.xml</value>
+                <value>ib/kcgl/model/Kcgl.hbm.xml</value>
+                <value>ib/zymd/model/Zymd.hbm.xml</value>
+                <value>ib/shopcar/model/Shopcar.hbm.xml</value>
+            </list>  
+        </property>
+	</bean>
+	
+	<!-- Transaction manager for a single Hibernate SessionFactory (alternative to JTA) -->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+	
+	<!-- Transaction template for Managers -->
+    <bean id="txProxyTemplate" abstract="true" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager"  ref="transactionManager"/>
+		<property name="transactionAttributes"  >
+           <props>
+				<prop key="affirm*">PROPAGATION_REQUIRED</prop>
+				<prop key="gen*">PROPAGATION_REQUIRED</prop>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="update*">PROPAGATION_REQUIRED</prop>
+				<prop key="create*">PROPAGATION_REQUIRED</prop>
+				<prop key="process*">PROPAGATION_REQUIRED</prop>                               
+				<prop key="delete*">PROPAGATION_REQUIRED</prop>               
+				<prop key="remove*">PROPAGATION_REQUIRED</prop>
+              	<prop key="send*">PROPAGATION_REQUIRED</prop>
+				<prop key="upload*">PROPAGATION_REQUIRED</prop>       
+				<prop key="*ImportExcel*">PROPAGATION_SUPPORTS</prop>       
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+   </bean>
+   	
+   	<!-- Question -->
+	<bean id="kclyService" class="ib.kcly.service.KclyService">
+		<property name="kclyDao" ref="kclyDao"/>
+	</bean>
+    <bean id="kclyDao" class="ib.kcly.dao.KclyDao">
+	    <property name="sessionFactory">
+	        <ref bean="sessionFactory" />
+	    </property>
+	</bean>
+	
+      	<!-- Shopcar -->
+	<bean id="shopcarService" class="ib.shopcar.service.ShopcarService">
+		<property name="shopcarDao" ref="shopcarDao"/>
+	</bean>
+    <bean id="shopcarDao" class="ib.shopcar.dao.ShopcarDao">
+	    <property name="sessionFactory">
+	        <ref bean="sessionFactory" />
+	    </property>
+	</bean>
+	
+	<!-- Xwdt -->
+	<bean id="xwdtService" class="ib.xwdt.service.XwdtService">
+		<property name="xwdtDao" ref="xwdtDao"/>
+	</bean>
+    <bean id="xwdtDao" class="ib.xwdt.dao.XwdtDao">
+	    <property name="sessionFactory">
+	        <ref bean="sessionFactory" />
+	    </property>
+	</bean>
+	
+	<!-- Kcgl -->
+	<bean id="kcglService" class="ib.kcgl.service.KcglService">
+		<property name="kcglDao" ref="kcglDao"/>
+	</bean>
+    <bean id="kcglDao" class="ib.kcgl.dao.KcglDao">
+	    <property name="sessionFactory">
+	        <ref bean="sessionFactory" />
+	    </property>
+	</bean>
+	
+	<!-- User -->
+	<bean id="userService" class="ib.user.service.UserService">
+		<property name="userDao" ref="userDao"/>
+	</bean>
+    <bean id="userDao" class="ib.user.dao.UserDao">
+	    <property name="sessionFactory">
+	        <ref bean="sessionFactory" />
+	    </property>
+	</bean>
+	
+	<!-- Zymd -->
+	<bean id="zymdService" class="ib.zymd.service.ZymdService">
+		<property name="zymdDao" ref="zymdDao"/>
+	</bean>
+    <bean id="zymdDao" class="ib.zymd.dao.ZymdDao">
+	    <property name="sessionFactory">
+	        <ref bean="sessionFactory" />
+	    </property>
+	</bean>
+	
+	 <bean class="ib.common.SpringContextHolder" />
+</beans>

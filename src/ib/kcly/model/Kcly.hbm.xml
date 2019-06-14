@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="ib.kcly.model.Kcly" table="kcly">
+        <id name="id" type="integer">
+            <column name="id"/>
+            <generator class="native"/>
+        </id>
+        <many-to-one name="kcgl" class="ib.kcgl.model.Kcgl" lazy="false" not-null="false">
+            <column name="kc_id" />
+        </many-to-one>
+        <many-to-one name="user" class="ib.user.model.User" lazy="false" not-null="false">
+            <column name="user_id" />
+        </many-to-one>
+        <property name="content" type="string">
+        	<column name="content"></column>
+        </property>
+        <property name="reply" type="string">
+        	<column name="reply"></column>
+        </property>
+        <property name="time" type="date">
+        	<column name="time"></column>
+        </property>
+        <property name="replytime" type="date">
+        	<column name="replytime"></column>
+        </property>
+    </class>
+</hibernate-mapping>

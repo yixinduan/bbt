@@ -1,0 +1,64 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+    <META content="IE=7.0000" http-equiv="X-UA-Compatible">
+    <TITLE>jquery判断浏览器版本过低代码 - 站长素材</TITLE>
+    <META content="text/html; charset=utf-8" http-equiv=Content-Type>
+    <LINK rel=stylesheet href="css/promotion_index.css">
+    <SCRIPT src="js/js_jquery-1.11.1.min.js"></SCRIPT>
+</HEAD>
+<BODY>
+<DIV style="DISPLAY: none" id=browser_ie>
+    <DIV class=brower_info>
+        <DIV class=notice_info>
+            <P>你的浏览器版本过低，可能导致网站不能正常访问！<BR>为了你能正常使用网站功能，请使用这些浏览器。</P></DIV>
+            <DIV class=browser_list>
+            <SPAN>
+            <A href="http://sc.chinaz.com/" target=_blank>
+            <IMG src="images/Chrome.png"><BR>Chrome
+            </A>
+            </SPAN>
+            <SPAN><A href="http://sc.chinaz.com/" target=_blank><IMG
+            src="images/Firefox.png"><BR>Firefox
+            </A></SPAN>
+            <SPAN><A href="http://sc.chinaz.com" target=_blank><IMG
+            src="images/Safari.png"><BR>Safari
+            </A></SPAN>
+            <SPAN><A
+            href="http://sc.chinaz.com"
+            target=_blank><IMG
+            src="images/IE.png"><BR>IE9及以上
+            </A></SPAN>
+            </DIV>
+    </DIV>
+</DIV>
+<DIV class=header>
+    <DIV class="header-inner wrap">
+        <A class=header-logo href=" ">融云</A>
+        <DIV class=header-account>
+            <A class=btn-signin href=" ">登录</A>
+            <A class=btn-signup href=" ">注册</A>
+        </DIV>
+        <UL class=header-nav>
+            <LI><A href=" ">首页</A></LI>
+            <LI><A href=" ">功能</A></LI>
+            <LI><A href=" ">案例</A></LI>
+            <LI><A href=" ">价格</A></LI>
+            <LI><A href=" ">知识库</A></LI>
+            <LI><A href=" ">文档</A></LI>
+            <LI><A href=" ">下载</A></LI>
+        </UL>
+    </DIV>
+</DIV>
+    <SCRIPT>
+        if (!$.support.leadingWhitespace) {
+            $("#browser_ie").show();
+        }
+    </SCRIPT>
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</BODY>
+</HTML>

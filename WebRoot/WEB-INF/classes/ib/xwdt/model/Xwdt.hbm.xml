@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="ib.xwdt.model.Xwdt" table="xwdt">
+        <id name="id" type="integer">
+            <column name="id"/>
+            <generator class="native"/>
+        </id>
+        <property name="title" type="string">
+        	<column name="title"></column>
+        </property>
+        
+        <property name="content" type="string">
+        	<column name="content"></column>
+        </property>
+        <property name="time" type="date">
+        	<column name="time"></column>
+        </property>
+        <property name="count" type="integer">
+        	<column name="count"></column>
+        </property>
+        <many-to-one name="user" class="ib.user.model.User" lazy="false">
+            <column name="user_id" />
+        </many-to-one>
+		<property name="img" type="string">
+        	<column name="img"></column>
+        </property>
+    </class>
+</hibernate-mapping>

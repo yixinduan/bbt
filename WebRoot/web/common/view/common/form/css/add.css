@@ -1,0 +1,157 @@
+body{padding: 0px;
+    margin: 0px;
+    line-height: 1.6;
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F53",Arial,sans-serif !important;
+    color: #222;
+}
+
+
+input[type='text']{
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    border: 1px solid #ccc;
+/*    border-radius: 4px; */
+    outline: none;
+    padding-left:10px;
+   /*  height: 29.5px; 显示不全问题*/
+    width: 200px;
+}
+
+input[type="button"]
+{
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    border: 1px solid #ccc;
+    outline: none;
+    height: 30px;
+    width: 100px;
+}
+
+button[type="button"]{ 
+  outline: none;
+  height: 30px;
+  width: 102px;
+  } 
+  
+  
+textarea {
+	transition: all 0.30s ease-in-out;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	border: 1px solid #ccc;
+/*	border-radius: 4px; */
+	outline: none;
+	padding-left: 10px;
+	height: 50px;
+	width: 240px;
+	rows: 2;
+	cols: 25;
+}
+
+input[type="password"]
+{
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    border: 1px solid #ccc;
+    outline: none;
+    padding-left:10px;
+    height: 30px;
+    width: 200px;
+}
+
+
+
+input[type='checkbox']{
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    border: 1px solid #ccc;
+/*    border-radius: 4px; */
+    padding-left:10px;
+    height: 16px;
+    width: 40px;
+}
+
+input:focus, textarea:focus{
+    border:1px solid rgb(55, 182, 238);;
+    box-shadow: 0 0 2px rgb(33, 162, 238);
+    -webkit-box-shadow: 0 0 2px rgb(33, 162, 238);
+    -moz-box-shadow: 0 0 2px rgb(33, 162, 238);
+}
+input[type='checkbox']:focus{
+    border:1px solid rgb(55, 182, 238);;
+    box-shadow: 0 0 2px rgb(33, 162, 238);
+    -webkit-box-shadow: 0 0 2px rgb(33, 162, 238);
+    -moz-box-shadow: 0 0 2px rgb(33, 162, 238);
+}
+
+
+.div_from_aoto{
+/*    margin-left: 50px;
+    margin-left: auto; 
+    margin-right: auto;
+    padding-left:10px;
+    margin-top: 30px; */
+}
+.laber_from{
+    width: 180px;
+    float: left;
+    line-height: 30px;
+    color: #222;
+    font-weight: normal;
+    padding-left: 20px;
+}
+.control-group{
+    padding-bottom: 10px;
+      line-height: 30px;
+      font-size: 14px;
+}
+.input_select{
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.form_select {
+	margin: 0;
+
+	padding: 0;
+
+	outline: none;
+
+	height: 34px;
+
+	line-height: 34px;
+
+	width: 200px;
+
+	border: rgb(191, 204, 220) 1px solid;
+
+	border-radius: 0px;
+
+	display: inline-block;
+
+	font: normal 14px/25px "微软雅黑", "SimSun", "宋体", "Arial";
+
+	background-size: 5px 8px,7px 9px,25px 0px,0px 34px;
+
+	background-color: #fff;
+
+	background-image: repeating-linear-gradient(225deg,rgb(105,123,149) 0%,rgb(105,123,149) 50%,transparent 50%,transparent 100%), 
+
+	repeating-linear-gradient(135deg,rgb(105,123,149) 0%,rgb(105,123,149) 50%,transparent 50%,transparent 100%), 
+
+	linear-gradient( #FFFFFF 0%,#F8F9Fd, #EFFAFA 100%), 
+
+	repeating-linear-gradient( rgb(191, 204, 220) 0%,rgb(191, 204, 220) 100%);
+
+	background-repeat: no-repeat;
+
+	background-position: 181px 13px,186px 13px,right top,172px top;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}

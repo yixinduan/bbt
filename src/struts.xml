@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="login" extends="struts-default">
+		<action name="checkName_user" class="ib.login.action.Login_UserAction" method="checkName"></action>
+		<action name="checkpwd_user" class="ib.login.action.Login_UserAction" method="checkpwd"></action>
+		<action name="login_user" class="ib.login.action.Login_UserAction" method="login">
+			<result name="success">/web/qiantai/index.jsp</result>
+		</action>
+		<action name="logout_user" class="ib.login.action.Login_UserAction" method="logout">
+			<result name="success">/web/qiantai/index.jsp</result>
+		</action>
+		
+		<action name="regUser" class="ib.login.action.Login_UserAction" method="regUser">
+			<result name="success">/web/login/regUser.jsp</result>
+		</action>
+		<action name="userSave" class="ib.user.action.UserAction" method="userSave">
+			<result name="success">/web/bf/login.jsp</result>
+		</action>
+		
+		<action name="checkName_root" class="ib.login.action.Login_RootAction" method="checkName"></action>
+		<action name="checkpwd_root" class="ib.login.action.Login_RootAction" method="checkpwd"></action>
+		<action name="randomCode" class="ib.login.action.Login_RootAction" method="randomCode"></action>
+		<action name="login_root" class="ib.login.action.Login_RootAction" method="login">
+			<result name="success">/web/houtai/index.jsp</result>
+		</action>
+		<action name="regRoot" class="ib.login.action.Login_RootAction" method="regUser">
+			<result name="success">/web/houtai/login/regUser.jsp</result>
+		</action>
+		<action name="rootSave" class="ib.user.action.UserAction" method="userSave">
+			<result name="success">/web/houtai/login/login.jsp</result>
+		</action>
+		
+	</package>
+	
+	<package name="qt" extends="struts-default">
+		<action name="grzx" class="ib.user.action.UserAction" method="grzx">
+			<result name="success">/web/user/grzxEdit.jsp</result>
+		</action>
+		<action name="userUpdate" class="ib.user.action.UserAction" method="userUpdate"></action>
+	</package>
+
+	<!-- user -->
+	<package name="user" extends="struts-default">
+		<action name="userList" class="ib.user.action.UserAction" method="userList">
+			<result name="success">/web/user/userList.jsp</result>
+		</action>
+		<action name="userListBycondition" class="ib.user.action.UserAction" method="userListBycondition">
+			<result name="success">/web/user/userList.jsp</result>
+		</action>
+		<action name="userByRepetition" class="ib.user.action.UserAction" method="userByRepetition"></action>
+		
+		<action name="userReserve" class="ib.user.action.UserAction" method="userReserve">
+			<result name="success" type="redirectAction">userListBycondition</result>
+		</action>
+		<action name="userDel" class="ib.user.action.UserAction" method="userDel">
+			<result name="success" type="redirectAction">userListBycondition</result>
+		</action>
+		<action name="userAllDel" class="ib.user.action.UserAction" method="userAllDel">
+			<result name="success" type="redirectAction">userListBycondition</result>
+		</action>
+	</package>
+
+	<!-- Kcly -->
+	<package name="kcly" extends="struts-default">
+		<action name="kclyList" class="ib.kcly.action.KclyAction" method="kclyList">
+			<result name="success">/web/kcly/kclyList.jsp</result>
+		</action>
+		<action name="kclyListBycondition" class="ib.kcly.action.KclyAction" method="kclyListBycondition">
+			<result name="success">/web/kcly/kclyList.jsp</result>
+		</action>
+		<action name="kclyView" class="ib.kcly.action.KclyAction" method="kclyEdit">
+			<result name="success">/web/kcly/kclyView.jsp</result>
+		</action>
+		
+		<action name="kclyEdit" class="ib.kcly.action.KclyAction" method="kclyEdit">
+			<result name="success">/web/kcly/kclyEdit.jsp</result>
+		</action>
+		<action name="kclySave" class="ib.kcly.action.KclyAction" method="kclySave">
+			<result name="success" type="redirectAction">kclyListBycondition</result>
+		</action>
+		<action name="kclyDel" class="ib.kcly.action.KclyAction" method="kclyDel">
+			<result name="success" type="redirectAction">kclyListBycondition</result>
+		</action>
+		<action name="kclyAllDel" class="ib.kcly.action.KclyAction" method="kclyAllDel">
+			<result name="success" type="redirectAction">kclyListBycondition</result>
+		</action>
+		
+		
+		<action name="upload_kclyEdit" class="ib.kcly.action.KclyAction" method="upload_kclyEdit">
+			<result name="success">/web/kcly/upload_kclyEdit.jsp</result>
+		</action>
+		<action name="upload_kclySave" class="ib.kcly.action.KclyAction" method="kclySave">
+			<result name="success">/web/qiantai/index.jsp</result>
+		</action>
+		<action name="kclyBy_tgListBycondition" class="ib.kcly.action.KclyAction" method="kclyBy_tgListBycondition"></action>
+		
+		
+		
+		<action name="kclySH" class="ib.kcly.action.KclyAction" method="kclySH">
+			<result name="success" type="redirectAction">kclyListBycondition</result>
+		</action>
+		
+		
+		<action name="kclyList_qt" class="ib.kcly.action.KclyAction" method="kclyList">
+			<result name="success">/web/kcly/kclyList.jsp</result>
+		</action>
+		<action name="kclySave_qt" class="ib.kcly.action.KclyAction" method="kclySave">
+			<result name="success" type="redirectAction">
+				<param name="actionName">kcglView_qt</param>
+                <param name="kcgl.id">${kcly.kcgl.id}</param>
+                <param name="activeFlag">${activeFlag}</param>
+			</result>
+		</action>
+	</package>
+
+	<!-- Xwdt -->
+	<package name="xwdt" extends="struts-default">
+		<action name="xwdtList" class="ib.xwdt.action.XwdtAction" method="xwdtList">
+			<result name="success">/web/xwdt/xwdtList.jsp</result>
+		</action>
+		<action name="xwdtListBycondition" class="ib.xwdt.action.XwdtAction" method="xwdtListBycondition">
+			<result name="success">/web/xwdt/xwdtList.jsp</result>
+		</action>
+		
+		<action name="xwdtEdit" class="ib.xwdt.action.XwdtAction" method="xwdtEdit">
+			<result name="success">/web/xwdt/xwdtEdit.jsp</result>
+		</action>
+		<action name="xwdtByRepetition" class="ib.xwdt.action.XwdtAction" method="xwdtByRepetition"></action>
+		<action name="xwdtSave" class="ib.xwdt.action.XwdtAction" method="xwdtSave">
+			<result name="success" type="redirectAction">xwdtListBycondition</result>
+		</action>
+		<action name="xwdtDel" class="ib.xwdt.action.XwdtAction" method="xwdtDel">
+			<result name="success" type="redirectAction">xwdtListBycondition</result>
+		</action>
+		
+		<action name="xwdtAllList" class="ib.xwdt.action.XwdtAction" method="xwdtAllList"></action>
+		
+		
+		
+		<action name="xwdtList_qt" class="ib.xwdt.action.XwdtAction" method="xwdtList">
+			<result name="success">/web/qiantai/Company-dynamics.jsp</result>
+		</action>
+		<action name="xwdtListBycondition_qt" class="ib.xwdt.action.XwdtAction" method="xwdtListBycondition">
+			<result name="success">/web/qiantai/Company-dynamics.jsp</result>
+		</action>
+	</package>
+	
+	
+	<!-- Kcgl -->
+	<package name="kcgl" extends="struts-default">
+		<action name="kcglList" class="ib.kcgl.action.KcglAction" method="kcglList">
+			<result name="success">/web/kcgl/kcglList.jsp</result>
+		</action>
+		<action name="kcglListBycondition" class="ib.kcgl.action.KcglAction" method="kcglListBycondition">
+			<result name="success">/web/kcgl/kcglList.jsp</result>
+		</action>
+		
+		<action name="kcglEdit" class="ib.kcgl.action.KcglAction" method="kcglEdit">
+			<result name="success">/web/kcgl/kcglEdit.jsp</result>
+		</action>
+		<action name="kcglByRepetition" class="ib.kcgl.action.KcglAction" method="kcglByRepetition"></action>
+		<action name="kcglSave" class="ib.kcgl.action.KcglAction" method="kcglSave">
+			<result name="success" type="redirectAction">kcglListBycondition</result>
+		</action>
+		<action name="kcglDel" class="ib.kcgl.action.KcglAction" method="kcglDel">
+			<result name="success" type="redirectAction">kcglListBycondition</result>
+		</action>
+		
+		<action name="kcglList_qt" class="ib.kcgl.action.KcglAction" method="kcglList">
+			<result name="success">/web/qiantai/Course-introduction.jsp</result>
+		</action>
+		
+		<action name="kcglView_qt" class="ib.kcgl.action.KcglAction" method="kcglEdit">
+			<result name="success">/web/qiantai/course-details.jsp</result>
+		</action>	
+	</package>
+	<!-- zymd -->
+	<!-- zymd -->
+	<package name="zymd" extends="struts-default">
+		<action name="zymdList" class="ib.zymd.action.ZymdAction" method="zymdList">
+			<result name="success">/web/zymd/zymdList.jsp</result>
+		</action>
+		<action name="zymdListBycondition" class="ib.zymd.action.ZymdAction" method="zymdListBycondition">
+			<result name="success">/web/zymd/zymdList.jsp</result>
+		</action>
+		
+		<action name="zymdEdit" class="ib.zymd.action.ZymdAction" method="zymdEdit">
+			<result name="success">/web/zymd/zymdEdit.jsp</result>
+		</action>
+		<action name="zymdByRepetition" class="ib.zymd.action.ZymdAction" method="zymdByRepetition"></action>
+		<action name="zymdSave" class="ib.zymd.action.ZymdAction" method="zymdSave">
+			<result name="success" type="redirectAction">zymdListBycondition</result>
+		</action>
+		<action name="zymdDel" class="ib.zymd.action.ZymdAction" method="zymdDel">
+			<result name="success" type="redirectAction">zymdListBycondition</result>
+		</action>
+		<action name="zymdAllDel" class="ib.zymd.action.ZymdAction" method="zymdAllDel">
+			<result name="success" type="redirectAction">zymdListBycondition</result>
+		</action>
+		
+		
+		
+		<action name="zymdList_qt" class="ib.zymd.action.ZymdAction" method="zymdList">
+			<result name="success">/web/qiantai//Direct-shop.jsp</result>
+		</action>
+		
+	</package>
+	
+	
+	<!-- Shopcar -->
+	<package name="shopcar" extends="struts-default">
+		<action name="shopcarList" class="ib.shopcar.action.ShopcarAction" method="shopcarList">
+			<result name="success">/web/shopcar/shopcarList.jsp</result>
+		</action>
+		<action name="shopcarListBycondition" class="ib.shopcar.action.ShopcarAction" method="shopcarListBycondition">
+			<result name="success">/web/shopcar/shopcarList.jsp</result>
+		</action>
+		<action name="shopcarView" class="ib.shopcar.action.ShopcarAction" method="shopcarEdit">
+			<result name="success">/web/shopcar/shopcarView.jsp</result>
+		</action>
+		
+		<action name="shopcarEdit" class="ib.shopcar.action.ShopcarAction" method="shopcarEdit">
+			<result name="success">/web/shopcar/shopcarEdit.jsp</result>
+		</action>
+		<action name="shopcarSave" class="ib.shopcar.action.ShopcarAction" method="shopcarSave">
+			<result name="success" type="redirectAction">shopcarListBycondition</result>
+		</action>
+		<action name="shopcarDel" class="ib.shopcar.action.ShopcarAction" method="shopcarDel">
+			<result name="success" type="redirectAction">shopcarListBycondition</result>
+		</action>
+		<action name="shopcarAllDel" class="ib.shopcar.action.ShopcarAction" method="shopcarAllDel">
+			<result name="success" type="redirectAction">shopcarListBycondition</result>
+		</action>
+		
+		
+		<action name="upload_shopcarEdit" class="ib.shopcar.action.ShopcarAction" method="upload_shopcarEdit">
+			<result name="success">/web/shopcar/upload_shopcarEdit.jsp</result>
+		</action>
+		<action name="upload_shopcarSave" class="ib.shopcar.action.ShopcarAction" method="shopcarSave">
+			<result name="success">/web/qiantai/index.jsp</result>
+		</action>
+		<action name="shopcarBy_tgListBycondition" class="ib.shopcar.action.ShopcarAction" method="shopcarBy_tgListBycondition"></action>
+		
+		
+		
+		<action name="shopcarSH" class="ib.shopcar.action.ShopcarAction" method="shopcarSH">
+			<result name="success" type="redirectAction">shopcarListBycondition</result>
+		</action>
+		
+		
+		<action name="shopcarList_qt" class="ib.shopcar.action.ShopcarAction" method="shopcarList">
+			<result name="success">/web/shopcar/shopcarList.jsp</result>
+		</action>
+		<action name="shopcarSave_qt" class="ib.shopcar.action.ShopcarAction" method="shopcarSave">
+			<result name="success" type="redirectAction">
+				<param name="actionName">kcglView_qt</param>
+                <param name="kcgl.id">${shopcar.kcgl.id}</param>
+                <param name="activeFlag">${activeFlag}</param>
+			</result>
+		</action>
+	</package>
+	
+</struts>    

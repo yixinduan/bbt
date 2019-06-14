@@ -1,0 +1,108 @@
+@font-face {
+    font-family:FontAwesome;
+    src:url(../utilLib/fonts/font_awesome/fontawesome-webfontf77b.eot?v=3.2.1);
+    src:url(../utilLib/fonts/font_awesome/fontawesome-webfontd41d.eot?#iefix&v=3.2.1)
+    format('embedded-opentype'),
+    url(../utilLib/fonts/font_awesome/fontawesome-webfontf77b.woff?v=3.2.1)
+    format('woff'),
+    url(../utilLib/fonts/font_awesome/fontawesome-webfontf77b.ttf?v=3.2.1)
+    format('truetype'),
+    url(../utilLib/fonts/font_awesome/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1)
+    format('svg');
+    font-weight:400;
+    font-style:normal
+}
+.button-icon{
+    vertical-align:middle;
+    color:white;
+    font-family: FontAwesome;font-weight: 400;font-size:15px;font-style: normal;padding-top:-1px;padding-right: 5px;
+}
+.search-icon{
+    vertical-align:middle;
+    color:white;
+    font-family: FontAwesome;font-weight: 400;font-size:13px;font-style: normal;padding-top:-1px;padding-right: 5px;
+}
+.table-icon{
+	vertical-align:middle;
+    font-family: FontAwesome;font-weight: 400;font-size:18px;font-style: normal;padding-top:-1px;padding-right: 5px;
+}
+
+.buttonAdd-icon{
+    vertical-align:middle;
+    color:white;
+    font-family: FontAwesome;font-weight: 400;font-size:12px;font-style: normal;padding-top:-1px;padding-right: 5px;
+}
+.font-icons{
+	vertical-align:middle;font-family: FontAwesome;font-weight: 400;font-style: normal;padding-top:-1px;padding-right: 5px;
+}
+.fontSize-icons{
+	font-size: 15px;
+}
+.icon-add:before{content:"\f067";}
+.icon-delete:before{content:"\f014";}
+.icon-download:before{content:"\f019";}
+.icon-edit:before{content:"\f044";}
+.icon-open:before{content:"\f06e";}
+.icon-search:before{content:"\f002";}
+.icon-settings:before{content:"\f013"}
+.icon-save:before{content:"\f0c7"}
+.icon-refresh:before{content:"\f021"}
+.icon-prompt:before{content:"\f071"}
+.icon-upload:before{content:"\f093"}
+.icon-ok:before{content:"\f00c"}
+.icon-backup:before{content:"\f0ed"}
+.icon-restore:before{content:"\f0ee"}
+.icon-shutdown:before{content:"\f011"}
+.icon-restart:before{content:"\f0ec"}
+.icon-offline:before{content:"\f08b"}
+.icon-convert:before{content:"\f021"}
+
+.icon-import:before{content:"\f01a"}
+.icon-export:before{content:"\f01b"}
+.icon-print:before{content:"\f02f"}
+
+.icon-visit:before{content:"\f0ec"}
+.icon-visit1:before{content:"\f0fb"}
+
+.button-icon-1{ font-style: normal; font-family: FontAwesome; font-weight: 500;font-size: 23px;line-height: 23px;}
+.icon-pagePrev:before{ content:"\f104"; }
+.icon-pageNext:before{ content:"\f105"; }
+.icon-searchOpen:before{ content:"\f103"; }
+.icon-searchClose:before{ content:"\f102"; }
+
+/** tab 面板按钮标识 (上，下) */
+.button-icon-2{ font-style: normal; font-family: FontAwesome; font-weight: 500;font-size: 20px;line-height: 18px;}
+a .iconOpenClose:before{ content:"\f102"; }
+a.collapsed .iconOpenClose:before{ content:"\f103"; }
+
+/** 左，右 尖括号 */
+.icon-left:before{ content: "\f104" }
+.icon-left2:before{ content: "\f100" }
+.icon-right:before{ content: "\f105" }
+.icon-right2:before{ content: "\f101" }
+
+/** 网络连接 */
+.icon-circle:before{content:"\f111";}
+.icon-circle-hollow:before{content:"\f10c";}
+/** 关闭按钮 */
+.icon-btn-off:before { content: "\f204"; }
+/** 开启按钮 */
+.icon-btn-on:before { content: "\f205"; }
+/** 开启按钮 */
+.fa-question-circle:before { content: "\f059"; }
+.fa-check-circle:before { content: "\f058"; }
+
+.fa-info-circle:before { content: "\f05a"; }
+
+/* 感叹号符号  */
+.icon-remind:before{ content:"\f06a";}
+/** 测试－连接符 */
+.icon-test:before{content:"\f090";}
+/** 测试－放大镜 */
+.icon-enlarge:before{content:"\f002";}
+
+.dist-icon {
+	vertical-align: middle;
+    font-family: FontAwesome; font-weight: 500; font-size: 20px; font-style: normal; padding-top: -1px; padding-right: 5px;
+}
+.icon-remove-circle:before{content:"\f05c";font-size: 14px;}

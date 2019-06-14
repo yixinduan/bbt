@@ -1,0 +1,2 @@
+<script type="text/javascript" src="${basePath }/view/common/xhEditor1.2.2/xheditor-1.2.2.min.js"></script>
+<script type="text/javascript" src="${basePath }/view/common/xhEditor1.2.2/zh-cn.js"></script>

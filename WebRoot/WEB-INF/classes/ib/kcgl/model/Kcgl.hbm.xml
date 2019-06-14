@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="ib.kcgl.model.Kcgl" table="kcgl">
+        <id name="id" type="integer">
+            <column name="id"/>
+            <generator class="native"/>
+        </id>
+        <property name="name" type="string">
+        	<column name="name"></column>
+        </property>
+		<property name="price1" type="string">
+        	<column name="price1"></column>
+        </property>
+        <property name="price" type="string">
+        	<column name="price"></column>
+        </property>
+        <property name="descs" type="string">
+        	<column name="descs"></column>
+        </property>
+        <property name="img" type="string">
+        	<column name="img"></column>
+        </property>
+        
+        <!-- 
+        <set  name="kcly" cascade="delete" >
+        	<key>
+        		<column name="kc_id"></column>
+        	</key>
+            <one-to-many class="ib.kcly.model.Kcly"   not-found="ignore"/>  
+        </set> 
+          -->
+    </class>
+</hibernate-mapping>

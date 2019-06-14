@@ -1,0 +1,220 @@
+
+.my-form-inline {
+    background-color: #E7E7E7;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 5px 5px 0px 0px;
+}
+
+.my-form-group {
+  	margin: 8px 18px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.my-form-group-30 {
+		width: 30%;
+		text-align: right;
+  	margin: 8px 0px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.my-form-group-60 {
+		width: 60%;
+		text-align: right;
+  	margin: 8px 0px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.my-form-btn-group {
+  	margin: 8px 18px;
+    vertical-align: middle;
+}
+
+.my-form-control {
+  height: 26px;
+  padding: 4px 10px;
+  line-height: 1.5;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.my-form-control:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+.my-form-control::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.my-form-control:-ms-input-placeholder {
+  color: #999;
+}
+.my-form-control::-webkit-input-placeholder {
+  color: #999;
+}
+.my-form-control[disabled],
+.my-form-control[readonly],
+fieldset[disabled] .my-form-control {
+  cursor: not-allowed;
+  background-color: #eee;
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .my-form-inline .my-form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .my-form-inline .my-form-group-30 {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .my-form-inline .my-form-group-60 {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .my-form-inline .my-form-btn-group {
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .my-form-inline .my-form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+  .my-form-inline .my-form-control-static {
+    display: inline-block;
+  }
+  .my-form-inline .input-group {
+    display: inline-table;
+    vertical-align: middle;
+  }
+  .my-form-inline .input-group .input-group-addon,
+  .my-form-inline .input-group .input-group-btn,
+  .my-form-inline .input-group .my-form-control {
+    width: auto;
+  }
+  .my-form-inline .input-group > .my-form-control {
+    width: 100%;
+  }
+  .my-form-inline .control-label {
+  	font-weight: bold;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .my-form-inline .radio,
+  .my-form-inline .checkbox {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .my-form-inline .radio label,
+  .my-form-inline .checkbox label {
+    padding-left: 0;
+  }
+  .my-form-inline .radio input[type="radio"],
+  .my-form-inline .checkbox input[type="checkbox"] {
+    position: relative;
+    margin-left: 0;
+  }
+  .my-form-inline .has-feedback .my-form-control-feedback {
+    top: 0;
+  }
+}
+
+@media (min-width: 768px) {  
+  .my-col-sm-1 {
+    width: 83.33333333%;
+  }
+  .my-col-sm-offset-1 {
+    margin-left: 40px;
+  }
+}
+
+.my-btn {
+  display: inline-block;
+  padding: 2px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.my-btn:focus,
+.my-btn:active:focus,
+.my-btn.active:focus,
+.my-btn.focus,
+.my-btn:active.focus,
+.my-btn.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.my-btn:hover,
+.my-btn:focus,
+.my-btn.focus {
+  color: #333;
+  text-decoration: none;
+}
+.my-btn:active,
+.my-btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+.my-btn.disabled,
+.my-btn[disabled],
+fieldset[disabled] .my-btn {
+  pointer-events: none;
+  cursor: not-allowed;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  opacity: .65;
+}
+
+.my-btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+.my-btn-default:hover,
+.my-btn-default:focus,
+.my-btn-default.focus,
+.my-btn-default:active{
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}

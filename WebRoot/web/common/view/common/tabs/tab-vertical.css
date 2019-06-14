@@ -1,0 +1,61 @@
+/**
+ * tab样式表
+ */
+
+table.tdss{border:0 px dashed #B8D0D6;border-collapse:collapse;width:100%;table-layout:fixed;margin:10px 0px;}
+table.tdss th{border:1px solid #B8D0D6;height:20px;fint-size:14px;line-height:20px;font-weight:bold;background:#B8D0D6;}
+table.tdss td{border:1px solid #B8D0D6;height:20px;fint-size:14px;line-height:20px;text-align:center;}
+table.tdss .td_a{text-align:center;}
+table.tdss .td_a a{color:#666;text-decoration:none;}
+table.tdss .td_a a:hover{color:orange;text-decoration:under-line;}
+#fieldset fieldset{border:1px solid #ccc;}
+label.laber_from {
+	width: 180px;
+}
+input[type="radio"] {
+/*	width: 20px; height: 34px; */
+    width: 14px;
+    margin-right: 5px;
+    margin-top: -3px;
+	vertical-align: middle;
+}
+input[type="checkbox"] {
+    width: 14px;
+    margin-right: 5px;
+    margin-top: -3px;
+	vertical-align: middle;
+}
+.gundongtiao::-webkit-scrollbar {
+ width: 10px;
+ height:10px;
+}
+.gundongtiao::-webkit-scrollbar-track {
+ background-color:#F7F3F7;
+ 
+}
+.gundongtiao::-webkit-scrollbar-thumb {
+ background-color: #BDBEBD;
+}
+.white { 
+color: #606060; 
+border: solid 1px #b7b7b7; 
+background: #fff; 
+background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed)); 
+background: -moz-linear-gradient(top, #fff, #ededed); 
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed'); 
+} 
+.white:hover { 
+background: #ededed; 
+background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc)); 
+background: -moz-linear-gradient(top, #fff, #dcdcdc); 
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc'); 
+} 
+.white:active { 
+color: #999; 
+background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#fff)); 
+background: -moz-linear-gradient(top, #ededed, #fff); 
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ffffff'); 
+} 
+
+.tab-content{float:right; width:80%; paading:10px;}
+.white1,.nav a:hover{font-size:12px;text-decoration; color:#666666}
